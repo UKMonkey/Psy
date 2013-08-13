@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F6C48801-4391-4606-BB2A-1C38FABA8A30}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Psy.Core</RootNamespace>
+    <AssemblyName>Psy.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArrayExtensions.cs" />
+    <Compile Include="AssetLoadException.cs" />
+    <Compile Include="Collision\BoundingSphereExtensions.cs" />
+    <Compile Include="Collision\CollisionResult.cs" />
+    <Compile Include="Collision\IMeshBuilder.cs" />
+    <Compile Include="Collision\IMeshCollisionTester.cs" />
+    <Compile Include="Collision\Mesh.cs" />
+    <Compile Include="Collision\MeshBuilder.cs" />
+    <Compile Include="Collision\MeshCollisionTester.cs" />
+    <Compile Include="Collision\MeshTriangle.cs" />
+    <Compile Include="Collision\MultiMeshCollisionTester.cs" />
+    <Compile Include="Collision\StaticMesh.cs" />
+    <Compile Include="Color4Extensions.cs" />
+    <Compile Include="ColourRect.cs" />
+    <Compile Include="Colours.cs" />
+    <Compile Include="Configuration\Sources\AppConfigConfigurationSource.cs" />
+    <Compile Include="Configuration\Configuration.cs" />
+    <Compile Include="Configuration\ConfigurationManager.cs" />
+    <Compile Include="Configuration\Sources\ConfigurationSource.cs" />
+    <Compile Include="Configuration\Sources\FileConfigurationSource.cs" />
+    <Compile Include="Configuration\Sources\NewConfigurationEvent.cs" />
+    <Compile Include="Configuration\Sources\NewConfigurationEventArgs.cs" />
+    <Compile Include="Configuration\StaticConfigurationManager.cs" />
+    <Compile Include="Console\BuildInCommands.cs" />
+    <Compile Include="Console\CommandBinding.cs" />
+    <Compile Include="Console\CommandBindings.cs" />
+    <Compile Include="Console\BaseConsole.cs" />
+    <Compile Include="Console\ConsoleCommandDelegate.cs" />
+    <Compile Include="Console\FloatVariable.cs" />
+    <Compile Include="Console\ConsoleLine.cs" />
+    <Compile Include="Console\ConsoleLogger.cs" />
+    <Compile Include="Console\IConsole.cs" />
+    <Compile Include="Console\StaticConsole.cs" />
+    <Compile Include="Cube.cs" />
+    <Compile Include="Direction.cs" />
+    <Compile Include="EasedVector.cs" />
+    <Compile Include="EnumerableExtentions.cs" />
+    <Compile Include="BinaryReaderWriterExtension.cs" />
+    <Compile Include="EpicModel\Anchor.cs" />
+    <Compile Include="EpicModel\AnchorAnimState.cs" />
+    <Compile Include="EpicModel\Animation.cs" />
+    <Compile Include="EpicModel\AnimationType.cs" />
+    <Compile Include="EpicModel\CollisionVolume.cs" />
+    <Compile Include="EpicModel\CollisionVolumeType.cs" />
+    <Compile Include="EpicModel\EpicModel.cs" />
+    <Compile Include="EpicModel\Keyframe.cs" />
+    <Compile Include="EpicModel\ModelPart.cs" />
+    <Compile Include="EpicModel\ModelPartAnimState.cs" />
+    <Compile Include="EpicModel\ModelPartFace.cs" />
+    <Compile Include="EpicModel\ModelTriangle.cs" />
+    <Compile Include="EpicModel\PickModelResult.cs" />
+    <Compile Include="EpicModel\PickVolumeResult.cs" />
+    <Compile Include="EpicModel\RenderArgs.cs" />
+    <Compile Include="EpicModel\Serialization\EpicModelReader.cs" />
+    <Compile Include="EpicModel\Serialization\EpicModelWriter.cs" />
+    <Compile Include="EpicModel\Serialization\IMaterialTranslator.cs" />
+    <Compile Include="FileSystem\Lookup.cs" />
+    <Compile Include="FixedLengthList.cs" />
+    <Compile Include="FrameRateCalculator.cs" />
+    <Compile Include="Input\IInputBinder.cs" />
+    <Compile Include="Input\InputBinder.cs" />
+    <Compile Include="Input\KeyAction.cs" />
+    <Compile Include="Input\InputEvent.cs" />
+    <Compile Include="Input\Key.cs" />
+    <Compile Include="Input\KeyPressEventArguments.cs" />
+    <Compile Include="Input\MouseEventUtility.cs" />
+    <Compile Include="Logging\Loggers\BaseLogger.cs" />
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Logging\LoggerLevel.cs" />
+    <Compile Include="Logging\Loggers\CommandPromptLogger.cs" />
+    <Compile Include="Logging\Loggers\FileLogger.cs" />
+    <Compile Include="Input\MouseButton.cs" />
+    <Compile Include="Input\MouseEventArguments.cs" />
+    <Compile Include="Logging\Loggers\TraceLogger.cs" />
+    <Compile Include="Material.cs" />
+    <Compile Include="MaterialCache.cs" />
+    <Compile Include="Platform.cs" />
+    <Compile Include="PrimitiveExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadOnlyDictionary.cs" />
+    <Compile Include="Rectangle.cs" />
+    <Compile Include="Serialization\StreamExtensions.cs" />
+    <Compile Include="Serialization\StringDictionarySerializer.cs" />
+    <Compile Include="StateMachine\IState.cs" />
+    <Compile Include="StateMachine\IStateFactory.cs" />
+    <Compile Include="StateMachine\IStateMachine.cs" />
+    <Compile Include="StateMachine\StateFactory.cs" />
+    <Compile Include="StateMachine\StateMachine.cs" />
+    <Compile Include="StaticRng.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="Tasks\ITask.cs" />
+    <Compile Include="Tasks\StaticTaskQueue.cs" />
+    <Compile Include="Tasks\Task.cs" />
+    <Compile Include="Tasks\TaskProcess.cs" />
+    <Compile Include="Tasks\TaskQueue.cs" />
+    <Compile Include="Tasks\TaskStatus.cs" />
+    <Compile Include="Tasks\TaskTypes\DelayedTask.cs" />
+    <Compile Include="Tasks\TaskTypes\ImmediateRunOnceTask.cs" />
+    <Compile Include="Tasks\TaskTypes\RepeatingTask.cs" />
+    <Compile Include="Tasks\TaskTypes\RepeatingTaskWithInitialDelay.cs" />
+    <Compile Include="TextureArea.cs" />
+    <Compile Include="TextureAreaHolder.cs" />
+    <Compile Include="TextureAtlasTextureDefinition.cs" />
+    <Compile Include="ThreedMesh\Face.cs" />
+    <Compile Include="ThreedMesh\ModelMaterial.cs" />
+    <Compile Include="ThreedMesh\Model.cs" />
+    <Compile Include="ThreedMesh\ModelObject.cs" />
+    <Compile Include="ThreedMesh\Reader\AmbientLightSource.cs" />
+    <Compile Include="ThreedMesh\Reader\IModelReader.cs" />
+    <Compile Include="ThreedMesh\MaterialEx.cs" />
+    <Compile Include="ThreedMesh\Reader\ModelReaderException.cs" />
+    <Compile Include="ThreedMesh\Reader\Wavefront\MaterialExReader.cs" />
+    <Compile Include="ThreedMesh\Reader\Wavefront\MaterialsReader.cs" />
+    <Compile Include="ThreedMesh\Reader\Wavefront\ModelReader.cs" />
+    <Compile Include="ThreedMesh\Triangle.cs" />
+    <Compile Include="Timer.cs" />
+    <Compile Include="TimeSample.cs" />
+    <Compile Include="IWindowSize.cs" />
+    <Compile Include="VectorExtensions.cs" />
+    <Compile Include="VertexCuboid.cs" />
+    <Compile Include="WindowAttributes.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Externals\SlimMath\SlimMath.csproj">
+      <Project>{820fe441-822f-4519-994b-04f1de27ff15}</Project>
+      <Name>SlimMath</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

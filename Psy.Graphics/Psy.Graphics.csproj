@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C0220DAC-1CAA-4A47-93E4-106C850D4232}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Psy.Graphics</RootNamespace>
+    <AssemblyName>Psy.Graphics</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CompareFunc.cs" />
+    <Compile Include="CoordinateMarkerRenderer.cs" />
+    <Compile Include="CubeMapFaceEnum.cs" />
+    <Compile Include="CullMode.cs" />
+    <Compile Include="Effects\IEffectHandle.cs" />
+    <Compile Include="Models\AnchorInstance.cs" />
+    <Compile Include="Models\CompiledModel.cs" />
+    <Compile Include="Models\Compilers\EpicModelCompiler.cs" />
+    <Compile Include="Models\CompiledModelCache.cs" />
+    <Compile Include="Models\MeshInstance.cs" />
+    <Compile Include="Models\ModelInstance.cs" />
+    <Compile Include="Models\ModelInstanceAnimation.cs" />
+    <Compile Include="Models\Renderers\ModelInstanceRenderer.cs" />
+    <Compile Include="Models\Renderers\EpicModelRenderer.cs" />
+    <Compile Include="FillMode.cs" />
+    <Compile Include="Effects\IEffect.cs" />
+    <Compile Include="FormatType.cs" />
+    <Compile Include="GraphicsContext.cs" />
+    <Compile Include="GraphicsContextLoader.cs" />
+    <Compile Include="ICubeTexture.cs" />
+    <Compile Include="IGraphicsContextFactory.cs" />
+    <Compile Include="ITexture.cs" />
+    <Compile Include="Textures\TextureCacheBase.cs" />
+    <Compile Include="UsageType.cs" />
+    <Compile Include="VertexDeclarationStorageBase.cs" />
+    <Compile Include="ZCompareFunction.cs" />
+    <Compile Include="IDataStream.cs" />
+    <Compile Include="Delegates.cs" />
+    <Compile Include="MatrixUtils.cs" />
+    <Compile Include="PrimitiveType.cs" />
+    <Compile Include="TextureFilter.cs" />
+    <Compile Include="Text\IFont.cs" />
+    <Compile Include="Text\IFontCache.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Text\TextFormat.cs" />
+    <Compile Include="Text\Weight.cs" />
+    <Compile Include="VertexDeclarations\ColouredVertex4.cs" />
+    <Compile Include="VertexDeclarations\ColouredVertexNormal4.cs" />
+    <Compile Include="VertexDeclarations\ColouredTexturedVertexNormal4.cs" />
+    <Compile Include="IVertexRenderer.cs" />
+    <Compile Include="VertexDeclarations\TexturedColouredVertex4.cs" />
+    <Compile Include="VertexDeclarations\TexturedVertex.cs" />
+    <Compile Include="VertexDeclarations\TexturedVertex4.cs" />
+    <Compile Include="VertexDeclarations\TransformedColouredTexturedVertex.cs" />
+    <Compile Include="VertexDeclarations\TransformedColouredVertex.cs" />
+    <Compile Include="VertexDeclarationValueAttribute.cs" />
+    <Compile Include="VertexDeclarationValueType.cs" />
+    <Compile Include="ViewFrustum.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Externals\SlimMath\SlimMath.csproj">
+      <Project>{820fe441-822f-4519-994b-04f1de27ff15}</Project>
+      <Name>SlimMath</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Psy.Core\Psy.Core.csproj">
+      <Project>{F6C48801-4391-4606-BB2A-1C38FABA8A30}</Project>
+      <Name>Psy.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

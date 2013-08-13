@@ -1,0 +1,30 @@
+namespace Psy.Core.EpicModel
+{
+    public enum AnimationType
+    {
+        None,
+        Standing,
+        Running,
+        Walking,
+        Crouching,
+        Jumping,
+        Reloading1H,
+        Reloading2H,
+        Shooting1H,
+        Shooting2H,
+        Lunge1,
+        Lunge2,
+        Lunge3,
+        MeleeWeaponSwing1,
+        MeleeWeaponSwing2,
+        MeleeWeaponSwing3,
+        Drop,
+        ThrowOverarm,
+        ThrowUnderarm,
+        Pickup,
+        Death1,
+        Death2,
+        Death3,
+        Death4,
+    }
+}
