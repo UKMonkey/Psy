@@ -111,7 +111,7 @@
     <Compile Include="ViewFrustum.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Externals\SlimMath\SlimMath.csproj">
+    <ProjectReference Include="..\..\Externals\SlimMath\SlimMath.csproj">
       <Project>{820fe441-822f-4519-994b-04f1de27ff15}</Project>
       <Name>SlimMath</Name>
     </ProjectReference>

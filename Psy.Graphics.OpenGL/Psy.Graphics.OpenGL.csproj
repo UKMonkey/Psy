@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\Builds\Debug\</OutputPath>
+    <OutputPath>..\..\Builds\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -25,19 +25,19 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\Builds\Release\</OutputPath>
+    <OutputPath>..\..\Builds\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <PlatformTarget>x86</PlatformTarget>
-    <OutputPath>..\Builds\Debug\</OutputPath>
+    <OutputPath>..\..\Builds\Debug\</OutputPath>
     <DefineConstants>DEBUG</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <PlatformTarget>x86</PlatformTarget>
-    <OutputPath>..\Builds\Release\</OutputPath>
+    <OutputPath>..\..\Builds\Release\</OutputPath>
     <Optimize>true</Optimize>
   </PropertyGroup>
   <ItemGroup>
@@ -76,11 +76,11 @@
     <Compile Include="Text\WrappedFont.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Externals\QuickFont\QuickFont.csproj">
+    <ProjectReference Include="..\..\Externals\QuickFont\QuickFont.csproj">
       <Project>{BBECE6FC-EF63-40F8-A734-A500D1DFC1AF}</Project>
       <Name>QuickFont</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Externals\SlimMath\SlimMath.csproj">
+    <ProjectReference Include="..\..\Externals\SlimMath\SlimMath.csproj">
       <Project>{820fe441-822f-4519-994b-04f1de27ff15}</Project>
       <Name>SlimMath</Name>
     </ProjectReference>
