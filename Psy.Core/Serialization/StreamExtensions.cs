@@ -23,6 +23,11 @@ namespace Psy.Core.Serialization
             return BitConverter.ToInt64(buffer, 0);
         }
 
+        public static void Write(this Stream stream, byte value)
+        {
+            stream.Write(new byte[]{value}, 0, 1);
+        }
+
         public static void Write(this Stream stream, long value)
         {
             var bytes = BitConverter.GetBytes(value);
@@ -43,6 +48,12 @@ namespace Psy.Core.Serialization
         }
 
         public static void Write(this Stream stream, short value)
+        {
+            var bytes = BitConverter.GetBytes(value);
+            stream.Write(bytes, 0, bytes.Length);
+        }
+
+        public static void Write(this Stream stream, ushort value)
         {
             var bytes = BitConverter.GetBytes(value);
             stream.Write(bytes, 0, bytes.Length);
